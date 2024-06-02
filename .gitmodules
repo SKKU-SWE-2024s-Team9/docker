@@ -1,6 +1,6 @@
 [submodule "backend"]
 	path = backend
-	url = ./backend/
+	url = https://github.com/SKKU-SWE-2024s-Team9/backend.git
 [submodule "chatbot"]
 	path = chatbot
-	url = ./chatbot
+	url = https://github.com/SKKU-SWE-2024s-Team9/chatbot.git
