@@ -1,0 +1,33 @@
+version: '3.7'
+
+services:  
+  backend:
+    container_name: backend
+    build: ./backend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    env_file:
+      - .env
+    volumes:
+      - file-data:/app/public
+      
+  db:
+    container_name: db
+    image: postgres:13
+    ports:
+      - "5432"
+    env_file:
+      - .env
+  
+  # chatbot:
+  #   build:
+  #     context: ./chatbot
+  #   ports:
+  #     - "8000:8000"
+  #   env_file:
+  #     - .env
+
+volumes:
+  file-data:
