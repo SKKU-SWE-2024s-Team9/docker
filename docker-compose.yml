@@ -21,13 +21,13 @@ services:
     env_file:
       - .env
   
-  # chatbot:
-  #   build:
-  #     context: ./chatbot
-  #   ports:
-  #     - "8000:8000"
-  #   env_file:
-  #     - .env
+  chatbot:
+    build:
+      context: ./chatbot
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
 
 volumes:
   file-data:
