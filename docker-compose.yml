@@ -12,6 +12,7 @@ services:
       - .env
     volumes:
       - file-data:/app/public
+    restart: always
       
   db:
     container_name: db
